@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hasnain – Karachi Water Tanker Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top"><svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#0a6fa8"/><path d="M32 8C32 8 15 28 15 38a17 17 0 0034 0C49 28 32 8 32 8z" fill="#fff"/><path d="M24 40a8 8 0 008 8" stroke="#18b6d6" stroke-width="4" fill="none" stroke-linecap="round"/></svg>AabGo</a>
+<nav><a href="#how">How it works</a><a href="#book">Book tanker</a><a href="#areas">Areas</a></nav>
+<a class="btn" href="#book">Book now</a></div></header>
+
+<div class="hero" id="top"><div class="wrap">
+<div><h1>Need water? A tanker at your doorstep in karachi.</h1>
+<p>Book a clean water tanker anywhere in Karachi. See your driver's details, arrival time and price upfront.</p>
+<div class="row"><a class="btn" style="background:#fff;color:var(--deep)" href="#book">Book a tanker</a><a class="btn ghost" href="#how">How it works</a></div></div>
+<svg class="big" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4C32 4 10 30 10 42a22 22 0 0044 0C54 30 32 4 32 4z" fill="#fff" fill-opacity=".95"/><path d="M21 44a11 11 0 0011 11" stroke="#18b6d6" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+</div>
+<svg class="waves" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20Q150 0 300 20T600 20T900 20T1200 20V40H0z"/></svg>
+<div class="road"><svg viewBox="0 0 150 56" aria-hidden="true"><rect x="2" y="12" width="92" height="28" rx="14" fill="#18b6d6"/><rect x="96" y="20" width="40" height="20" rx="4" fill="#fff"/><rect x="104" y="24" width="14" height="9" fill="#0a6fa8"/><rect x="2" y="36" width="134" height="6" fill="#06344f"/><circle cx="26" cy="46" r="8" fill="#222"/><circle cx="72" cy="46" r="8" fill="#222"/><circle cx="118" cy="46" r="8" fill="#222"/></svg></div></div>
+
+<section id="how"><div class="wrap"><h2>Three easy steps</h2><p class="sub">No phone calls. No waiting.</p>
+<div class="grid3 steps">
+<div class="card"><div class="ico">1</div><h3>Fill the form</h3>Enter your name, number and complete address.</div>
+<div class="card"><div class="ico">2</div><h3>Choose a tanker</h3>1000, 2000 or 4000 gallons. The price shows instantly.</div>
+<div class="card"><div class="ico">3</div><h3>Track your driver</h3>See the driver's name, number and arrival time.</div></div></div></section>
+
+<section id="book" style="padding-top:10px"><div class="wrap"><h2>Book a tanker</h2><p class="sub">All fields are required.</p>
+<div id="formView" class="book">
+<form class="card" id="f" novalidate>
+<label for="nm">Your name</label><input id="nm" autocomplete="name" placeholder="Example: Ahmed Khan"><p class="err" id="e1"></p>
+<label for="ph">Mobile number</label><input id="ph" inputmode="numeric" maxlength="11" autocomplete="tel" placeholder="03XXXXXXXXX"><p class="err" id="e2"></p>
+<label for="ar">Area</label><select id="ar"></select>
+<label for="ad">Complete address</label><textarea id="ad" rows="3" placeholder="House/flat number, street, building, landmark"></textarea><p class="err" id="e3"></p>
+<label>Tanker size</label><div class="sizes" id="sizes"></div>
+<p style="margin-top:20px"><button class="btn" style="width:100%" type="submit">Confirm order</button></p></form>
+<aside class="card sum"><h3>Order summary</h3>
+<div class="line"><span>Tanker</span><b id="s1"></b></div><div class="line"><span>Water price</span><b id="s2"></b></div><div class="line"><span>Delivery charges</span><b id="s3"></b></div>
+<div class="line tot"><span>Total</span><span id="s4"></span></div><p class="note">Pay the driver in cash after the tanker arrives.</p></aside></div>
+
+<div id="done" class="book">
+<div class="card"><div class="ok"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.5 3.5L17 9"/></svg>Order confirmed</div>
+<p class="note" id="oid"></p>
+<div class="track"><i id="bar"></i><div class="st on"><em>✓</em>Confirmed</div><div class="st on"><em>✓</em>Driver assigned</div><div class="st" id="st3"><em>3</em>On the way</div><div class="st" id="st4"><em>4</em>Arrived</div></div>
+<h3 style="margin-top:22px">Your driver</h3>
+<div class="drv" style="margin-top:12px"><div class="av" id="av"></div><div><b id="dn" style="font-size:20px"></b><br><span class="note" id="dr"></span></div></div>
+<dl class="kv"><dt>Driver number</dt><dd><a id="dp" href="#"></a></dd><dt>Tanker number</dt><dd id="dv"></dd><dt>Tanker size</dt><dd id="dsz"></dd><dt>Delivery address</dt><dd id="dad"></dd><dt>Customer</dt><dd id="dcu"></dd></dl></div>
+<div><div class="eta"><div>Driver arrives in</div><div class="t" id="cd">--:--</div><div id="etm" style="opacity:.8"></div></div>
+<div class="card sum" style="margin-top:18px"><div class="line"><span>Water</span><b id="p1"></b></div><div class="line"><span>Delivery</span><b id="p2"></b></div><div class="line tot"><span>Total price</span><span id="p3"></span></div></div>
+<p style="margin-top:18px"><button class="btn" id="again" style="width:100%">New order</button></p></div></div></div></section>
+
+<section id="areas" style="padding-top:10px"><div class="wrap"><h2>We serve these areas of Karachi</h2><p class="sub">More areas coming soon.</p><div class="areas" id="al"></div></div></section>
+<footer><div class="wrap"><div class="brand">AabGo</div>Karachi's trusted water tanker service. <br> <b>Owner: Afnan Yousuf </b> <br>Manager: Hasnain Raza </div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
